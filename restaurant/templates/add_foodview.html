@@ -1,0 +1,32 @@
+{%extends 'a_layout.html'%}
+
+{%block content%}
+<br><br><br><br><br><br>
+<font color="white">
+<h2><center>Food View</center></h2>
+    <table border="2" style="width:1002px; margin-left:141px; text-align:center;">
+        <tr style="font-weight: bold;">
+            <td>Id</th>
+            <td>Item Type</th>
+            <td>Time Interval</th>
+            <td>Category</th>
+            <td>Food Item</th>
+            <td>Amount</td>
+            <td colspan=2>Action</th>
+        </tr>
+        {% for tasks in tasks %}
+            <tr>
+                <td>{{ tasks.id }}</td>
+                <td>{{ tasks.itemtype }}</td>
+                <td>{{ tasks.timeinterval}}</td>
+                <td>{{ tasks.category }}</td>
+                <td>{{ tasks.foodname }}</td>
+                <td>{{ tasks.amount }}</td>
+                <td><a href="/add_foodupdate/{{tasks.id}}">Update</a></td>
+                <td><a href="/add_fooddelete/{{tasks.id}}">Delete</a></td>
+            </tr>
+        {% endfor %}
+    </table></font>
+<br><br>
+
+{%endblock%}

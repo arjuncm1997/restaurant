@@ -1,0 +1,24 @@
+{%extends "a_layout.html"%}
+
+{%block content%}
+
+<!-- /inner_content -->
+<div class="inner_content_info_agileits">
+    <div class="container">
+        <h3 class="heading-agileinfo"><br><br>Add Category</h3>
+        <div class="modal-body align-w3">
+            <form action="/add_category" method="POST" class="p-sm-3">
+                <div class="form-group">
+                    <label class="mb-2">Category</label>
+                    <input type="text" class="form-control" id="category" name="category" aria-describedby="emailHelp" placeholder="" required="">
+                <div><br>
+                <div class="right-w3l">
+                    <input type="submit" class="form-control bg-theme" value="ADD">
+                </div><br>
+            </form>
+        </div>
+    </div>
+</div></div>s
+
+<!-- //inner_content -->
+{%endblock%}

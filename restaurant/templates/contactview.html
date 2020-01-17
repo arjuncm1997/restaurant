@@ -1,0 +1,29 @@
+{%extends 'a_layout.html'%}
+
+{%block content%}
+<br><br><br><br><br><br>
+<font color="white">
+<h2><center>View Contacts</center></h2>
+    <table border="2" style="width:1002px; margin-left:141px; text-align:center;">
+        <tr style="font-weight: bold;">
+            <td>Id</th>
+            <td>firstname</th>
+            <td>lastname</th>
+            <td>email</th>
+            <td>subject</th>
+            <td>message</th>
+        </tr>
+        {% for tasks in tasks %}
+            <tr>
+                <td>{{ tasks.id }}</td>
+                <td>{{ tasks.firstname }}</td>
+                <td>{{ tasks.lastname }}</td>
+                <td>{{ tasks.email }}</td>
+                <td>{{ tasks.subject }}</td>
+                <td>{{ tasks.message }}</td>
+            </tr>
+        {% endfor %}
+    </table></font>
+<br><br>
+
+{%endblock%}

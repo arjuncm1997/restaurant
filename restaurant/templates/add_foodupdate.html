@@ -1,0 +1,53 @@
+{%extends "a_layout.html"%}
+
+{%block content%}
+
+<!-- /inner_content -->
+<div class="inner_content_info_agileits">
+    <div class="container">
+        <h3 class="heading-agileinfo"><br><br>Update Food Items</h3>
+        <div class="modal-body align-w3">
+            <form action="/add_foodupdate/{{task.id}}" method="POST" class="p-sm-3">
+             <div class="form-group">
+                    <label>Item Type</label>
+                    <input type="text" class="form-control" value="{{task.itemtype}}">
+                    <select id="itemtype" name="itemtype" class="form-control" required="">
+                        <option value="Veg">Veg</option>
+                        <option value="Non-Veg">Non-Veg</option>
+                    </select>
+                    <span></span>
+                </div>
+                 <div class="form-group">
+                    <label>Choose Type</label>
+                    <input type="text" class="form-control" value="{{task.timeinterval}}">
+                    <select id="timeinterval" name="timeinterval" class="form-control" required="">
+                        <option value="Breakfast">Breakfast</option>
+                        <option value="Lunch">Lunch</option>
+                        <option value="Dinner">Dinner</option>
+                        <option value="Snacks">Snacks</option>
+                    </select>
+                    <span></span>
+                </div>
+                <div class="form-group">
+                    <label class="mb-2">Category</label>
+                    <input type="text" class="form-control" id="category" value="{{task.category}}" name="category" aria-describedby="emailHelp" placeholder="" required="">
+                </div>
+                <div class="form-group">
+                    <label class="mb-2">Food Name</label>
+                    <input type="text" class="form-control" id="foodname" value="{{task.foodname}}" name="foodname" aria-describedby="emailHelp" placeholder="" required="">
+                </div>
+                <div class="form-group">
+                    <label class="mb-2">Amount in Rs.</label>
+                    <input type="text" class="form-control" id="amount" name="amount" value="{{task.amount}}" aria-describedby="emailHelp" placeholder="" required="">
+                </div><br>
+                <div class="right-w3l">
+                    <input type="submit" class="form-control bg-theme" value="UPDATE">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- //inner_content -->
+{%endblock%}
+

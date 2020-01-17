@@ -1,0 +1,24 @@
+{%extends 'a_layout.html'%}
+
+{%block content%}
+<br><br><br><br><br><br>
+<font color="white">
+<h2><center>Food Categories</center></h2>
+    <table border="2" style="width:1002px; margin-left:141px; text-align:center;">
+        <tr style="font-weight: bold;">
+            <td>Id</th>
+            <td>Category</th>
+            <td colspan=2>Action</th>
+        </tr>
+        {% for tasks in tasks %}
+            <tr>
+                <td>{{ tasks.id }}</td>
+                <td>{{ tasks.category }}</td>
+                <td><a href="/add_categoryupdate/{{tasks.id}}">Update</a></td>
+                <td><a href="/add_categorydelete/{{tasks.id}}">Delete</a></td>
+            </tr>
+        {% endfor %}
+    </table></font>
+<br><br>
+
+{%endblock%}
